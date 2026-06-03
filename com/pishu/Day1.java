@@ -12,8 +12,12 @@ public class Day1 {
         String[] names={"lakshit","rahul","pankaj"};//non primitive array
         System.out.println();
         System.out.println("non primitive array-->");
-        for (int i=0;i<names.length;i++)
-            System.out.println(names[i]+" ");
-        
+        // WRONG: This tries to access an index that doesn't exist
+        // If your code currently looks like this:
+// Change it to this:
+        for (int i = 0; i < names.length; i++) {
+        System.out.println(names[i]); // This stops correctly at the last index
+        }
     }
+    
 }
